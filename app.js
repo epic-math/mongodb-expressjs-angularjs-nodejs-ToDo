@@ -9,7 +9,6 @@ var routes = require('./routes/index');
 var todos = require('./routes/todos');
 
 var mongoose = require('mongoose');
-
 mongoose.connect('mongodb://localhost/todoApp', function(err) {
     if(err) {
         console.log('connection error', err);
@@ -65,6 +64,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
